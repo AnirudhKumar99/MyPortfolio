@@ -1,17 +1,25 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, ListGroup, ListGroupItem } from "react-bootstrap";
 import WorkComponent from "../WorkComponent/WorkComponent";
 const ExperienceSection = () => (
   <Container className="bg-success">
-    <Row style={RowStyles}>
+    <Row>
       <Col lg={6}>
         <Container id="experience">
           <Row>
             <h2>Experience</h2>
           </Row>
-          <WorkComponent />
-          <WorkComponent />
-          <WorkComponent />
+          <ListGroup>
+            <ListGroupItem>
+              <WorkComponent />
+            </ListGroupItem>
+            <ListGroupItem>
+              <WorkComponent />
+            </ListGroupItem>
+            <ListGroupItem>
+              <WorkComponent />
+            </ListGroupItem>
+          </ListGroup>
         </Container>
       </Col>
       <Col lg={6}>
@@ -26,10 +34,6 @@ const ExperienceSection = () => (
   </Container>
 );
 
-const RowStyles = {
-  // "height":"100vh",
-  "text-align": "left",
-};
 ExperienceSection.propTypes = {};
 
 ExperienceSection.defaultProps = {};

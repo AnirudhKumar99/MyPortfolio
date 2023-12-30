@@ -1,27 +1,23 @@
 import React from "react";
-import { Col, Container, Row,Image, Button } from "react-bootstrap";
-import ProfilePic from '../../ProfileImage.jpg'
+import { Col, Container, Row, Image, Button } from "react-bootstrap";
+import ProfilePic from "../../ProfileImage.jpg";
+import styles from "./HomeSection.module.css";
 
 const HomeSection = () => (
-  <Container  id="home"  >
-    <Row style={RowStyles} className="bg-dark">
-      <Col lg={4} sm={6}>
+  <Container className={styles.HomeSection}>
+    <Row>
+      <Col className={styles.ImgSection} lg={6}>
         <Image src={ProfilePic} roundedCircle fluid />
       </Col>
-      <Col className="bg-light">
-        <h1>Hi, I am Anirudh </h1>
-        <h3> I am a FullStack Developer.</h3>
-        <Button variant="info" style={ButtonStyles}>Get Resume</Button>
+      <Col  className={styles.AboutSection}>
+        <h1>Hi, I am <b>Anirudh</b> </h1>
+        <h3> I am a <b> FullStack Developer</b></h3>
+        <Button className={styles.ButtonSection} variant="info">Get Resume</Button>
       </Col>
     </Row>
   </Container>
 );
-const RowStyles={
-  "height":"100vh"
-}
-const ButtonStyles={
-  "border-radius":"20px"
-}
+
 HomeSection.propTypes = {};
 
 HomeSection.defaultProps = {};
